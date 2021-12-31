@@ -1,0 +1,68 @@
+/* ----- Color Palette -----
+  Alice Blue (--white) #E7ECEF
+  Yala Blue (--dark-blue)#274C77
+  Cerulean (--medium-blue)Frost #6096BA
+  Baby Blue (--light-blue)Eyes #A3CEF1
+  Battleship Grey (--light-grey) #8B8C89
+   ----- Color Palette -----*/
+
+:root {
+  --white: #E7ECEF;
+  --dark-blue: #274C77;
+  --medium-blue: #6096BA;
+  --light-blue: #8B8C89;
+  --light-grey: #8B8C89;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 0;
+  font-family: 'Spline Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#content { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header, .footer, .middle {
+  width: 100vw;
+}
+
+.header, .footer {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-top {
+  font-size: larger;
+}
+
+#header-bottom {
+  font-size: medium;
+  display: flex;
+}
+
+.middle {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+  background-color: var(--medium-blue);
+}
