@@ -10,8 +10,9 @@
   --white: #E7ECEF;
   --dark-blue: #274C77;
   --medium-blue: #6096BA;
-  --light-blue: #8B8C89;
+  --light-blue: #A3CEF1;
   --light-grey: #8B8C89;
+  --dark-blue-green: #0A2E36;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap');
@@ -19,24 +20,28 @@
 html, body {
   height: 100vh;
   width: 100vw;
-  margin: 0 0;
+  max-width: 100%;
+  margin: 0px;
   font-family: 'Spline Sans', sans-serif;
 }
 
 body {
   display: flex;
   justify-content: center;
+  margin: 0px;
 }
 
-#content { 
+#container { 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
+  max-width: 100%;
 }
 
-.header, .footer, .middle {
-  width: 100vw;
+.header, .footer, .content {
+  width: 100%;
 }
 
 .header, .footer {
@@ -48,21 +53,124 @@ body {
   align-items: center;
 }
 
+.footer {
+  padding: 8px 0px;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 4px;
+}
+
+.github-icon {
+  padding: 0 4px;
+  width: 26px;
+  height: auto;
+  transition: transform .5s ease-in-out;
+}
+
+.github-icon:hover {
+  transform: rotate(360deg);
+}
+
 #header-top {
-  font-size: larger;
+  font-size: 48px;
+  margin: 8px;
+  text-shadow:
+  3px 3px 0 var(--dark-blue-green),
+-1px -1px 0 var(--dark-blue-green),
+ 1px -1px 0 var(--dark-blue-green),
+ -1px 1px 0 var(--dark-blue-green),
+  1px 1px 0 var(--dark-blue-green);
 }
 
 #header-bottom {
   font-size: medium;
   display: flex;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  margin: 12px;
+  margin-top: 0px;
+  padding: 6px;
+  border: 4px solid var(--medium-blue);
+  border-radius: 8px;
 }
 
-.middle {
+#content {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   height: auto;
+  width: 100%;
   align-items: center;
   background-color: var(--medium-blue);
+}
+
+
+.menu-button {
+  position: relative;
+  top: 0;
+  margin: 4px 10px;
+  padding: 0px 10px;
+  transition: top ease 0.2s;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  top: -3px;
+}
+
+.clicked-button {
+  border-bottom: 3px solid var(--dark-blue);
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 510px;
+  background-color: var(--white);
+  border: 4px solid var(--dark-blue);
+  border-radius: 16px;
+  color: var(--dark-blue-green);
+}
+
+.info-header {
+  font-size: 24px;
+  font-weight: bold;
+  padding:12px;
+  padding-bottom: 0px;
+}
+
+.info-content {
+  color: var(--dark-blue);
+  font-size: 14px;
+  font-weight: 100;
+  padding: 16px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.insta-handle {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.picture {
+  max-width: 200px;
+  height: auto;
+  margin-top: 12px;
+  border-radius: 16px;
+  box-shadow: 6px 4px 4px var(--light-grey)
 }
