@@ -62,7 +62,7 @@ const showHome = () => {
     const instaHandle = document.createElement('a');
     instaHandle.classList.add('insta-handle')
     instaHandle.textContent = '@basement_kitchen'
-    instaHandle.href = 'https://www.google.com'
+    instaHandle.href = 'https://www.instagram.com/basement_kitchen/'
 
     contactContent.appendChild(instaHandle);
     contactContainer.appendChild(contactHeader);
