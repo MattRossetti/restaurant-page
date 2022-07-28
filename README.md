@@ -1,6 +1,7 @@
 # Basement Kitchen Restaurant Page!
 
 ## Project Link
+https://github.com/MattRossetti/restaurant-page
 
 ## Project Overview
 This project is part of The Odin Project's Full stack Javascript course. The task was to create a website for a restaurant. I have an instagram account dedicated to food I cook, so pictures from the instagram were used for website.
